@@ -20,6 +20,7 @@ class ColumnsView: XIBView {
     override func didLoadView() {
         setupCollectionView()
     }
+    
 }
 
 extension ColumnsView: UICollectionViewDataSource {
@@ -31,10 +32,6 @@ extension ColumnsView: UICollectionViewDataSource {
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 0
-    }
-    
-    func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 0
     }
     
