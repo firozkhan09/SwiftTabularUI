@@ -9,7 +9,7 @@ import UIKit
 
 class TabularView: XIBView {
     private let cellIdentifier = "TabularViewCell"
-    @IBOutlet private(set) var tabelView:UITableView!
+    @IBOutlet private(set) var tableView:UITableView!
     
     override func innerContentView() -> UIView? {
         let bundle = Bundle(for: type(of: self))
@@ -20,14 +20,18 @@ class TabularView: XIBView {
     override func didLoadView() {
         setupTableView()
     }
+    
+    func loadTable(data:[String]) {
+        tableView.reloadData()
+    }
 }
 
 extension TabularView: UITableViewDataSource, UITableViewDelegate {
     private func setupTableView() {
-        tabelView?.dataSource = self
-        tabelView?.delegate = self
+        tableView?.dataSource = self
+        tableView?.delegate = self
         let nib = UINib(nibName: cellIdentifier, bundle: .main)
-        tabelView?.register(nib, forCellReuseIdentifier: cellIdentifier)
+        tableView?.register(nib, forCellReuseIdentifier: cellIdentifier)
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // This is a table view having only one cell,
