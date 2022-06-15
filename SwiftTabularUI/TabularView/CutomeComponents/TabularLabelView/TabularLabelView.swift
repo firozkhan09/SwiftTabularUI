@@ -13,6 +13,7 @@ class TabularLabelView: XIBView {
     override func innerContentView() -> UIView? {
         let bundle = Bundle(for: type(of: self))
         bundle.loadNibNamed("TabularLabelView", owner: self, options: nil)
+        self.contentView.addBorder()
         return self.contentView
     }
     
