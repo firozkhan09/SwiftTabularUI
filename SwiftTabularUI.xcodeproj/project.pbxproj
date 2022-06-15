@@ -26,6 +26,7 @@
 		0E43BC74285A402D00BB120E /* GroupedColumnItem.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0E43BC73285A402D00BB120E /* GroupedColumnItem.xib */; };
 		0E43BC8D285A43BF00BB120E /* TabularLabelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E43BC8C285A43BF00BB120E /* TabularLabelView.swift */; };
 		0E43BC8F285A43EA00BB120E /* TabularLabelView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0E43BC8E285A43EA00BB120E /* TabularLabelView.xib */; };
+		0E43BC91285A4B6B00BB120E /* UIView_extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E43BC90285A4B6B00BB120E /* UIView_extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +51,7 @@
 		0E43BC73285A402D00BB120E /* GroupedColumnItem.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GroupedColumnItem.xib; sourceTree = "<group>"; };
 		0E43BC8C285A43BF00BB120E /* TabularLabelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabularLabelView.swift; sourceTree = "<group>"; };
 		0E43BC8E285A43EA00BB120E /* TabularLabelView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TabularLabelView.xib; sourceTree = "<group>"; };
+		0E43BC90285A4B6B00BB120E /* UIView_extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView_extension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +111,7 @@
 			isa = PBXGroup;
 			children = (
 				0E43BC362859C0AB00BB120E /* XIBView.swift */,
+				0E43BC90285A4B6B00BB120E /* UIView_extension.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -251,6 +254,7 @@
 				0E43BC8D285A43BF00BB120E /* TabularLabelView.swift in Sources */,
 				0E43BC212859AEB000BB120E /* ViewController.swift in Sources */,
 				0E43BC3B2859C2B600BB120E /* TabularViewCell.swift in Sources */,
+				0E43BC91285A4B6B00BB120E /* UIView_extension.swift in Sources */,
 				0E43BC402859CB1400BB120E /* ColumnsView.swift in Sources */,
 				0E43BC1D2859AEB000BB120E /* AppDelegate.swift in Sources */,
 				0E43BC72285A401800BB120E /* GroupedColumnItem.swift in Sources */,
