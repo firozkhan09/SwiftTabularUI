@@ -7,8 +7,23 @@
 
 import UIKit
 
+protocol TabularViewDataSource: NSObjectProtocol {
+    func numerOfColumns(in tabularView: TabularView) -> Int
+    
+    func tabularView(_ tabularView: TabularView, columnInfoData atIndex:Int) -> ColumnInfoData
+}
+
+protocol TabularViewDelegate: NSObjectProtocol {
+    
+}
+
 class TabularView: XIBView {
+    
+    weak open var dataSource: TabularViewDataSource?
+    weak open var delegate: TabularViewDelegate?
+    
     private let cellIdentifier = "TabularViewCell"
+    
     @IBOutlet private(set) var tableView:UITableView!
     
     override func innerContentView() -> UIView? {
