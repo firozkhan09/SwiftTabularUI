@@ -7,23 +7,6 @@
 
 import UIKit
 
-enum ColumnGroupType {
-    case single
-    case double
-    case triple
-    
-    var cellIdentifier:String {
-        switch self {
-        case .single:
-            return ""
-        case .double:
-            return ""
-        case .triple:
-            return ""
-        }
-    }
-}
-
 class ColumnsView: XIBView {
     private let cellIdentifier = "ColumnCollectionViewCell"
     @IBOutlet private(set) var collectionView:UICollectionView!
