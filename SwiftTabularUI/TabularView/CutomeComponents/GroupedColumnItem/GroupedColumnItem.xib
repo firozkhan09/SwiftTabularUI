@@ -17,8 +17,28 @@
         <view contentMode="scaleToFill" id="iN0-l3-epB">
             <rect key="frame" x="0.0" y="0.0" width="414" height="182"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="Vse-9W-KDz">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="182"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BUK-DX-ML0" customClass="TabularLabelView" customModule="SwiftTabularUI" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="91"/>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        </view>
+                        <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uy0-kC-gnH">
+                            <rect key="frame" x="0.0" y="91" width="414" height="91"/>
+                        </stackView>
+                    </subviews>
+                </stackView>
+            </subviews>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="Vse-9W-KDz" secondAttribute="bottom" id="XMu-6y-s7y"/>
+                <constraint firstItem="Vse-9W-KDz" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="a3w-0D-gB3"/>
+                <constraint firstItem="Vse-9W-KDz" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="hCW-et-VxZ"/>
+                <constraint firstItem="Vse-9W-KDz" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="rpl-Zy-0U9"/>
+            </constraints>
             <nil key="simulatedTopBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <point key="canvasLocation" x="173.91304347826087" y="-69.642857142857139"/>
