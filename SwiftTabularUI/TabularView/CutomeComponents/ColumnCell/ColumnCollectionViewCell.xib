@@ -10,14 +10,29 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" restorationIdentifier="ColumnCollectionViewCell" id="gTV-IL-0wX" customClass="ColumnCollectionViewCell" customModule="SwiftTabularUI" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+            <rect key="frame" x="0.0" y="0.0" width="427" height="154"/>
             <autoresizingMask key="autoresizingMask"/>
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                <rect key="frame" x="0.0" y="0.0" width="427" height="154"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="gQH-2q-XO8">
+                        <rect key="frame" x="0.0" y="0.0" width="427" height="154"/>
+                    </stackView>
+                </subviews>
             </view>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
-            <point key="canvasLocation" x="139" y="107"/>
+            <constraints>
+                <constraint firstItem="gQH-2q-XO8" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="0Ye-Yk-fVL"/>
+                <constraint firstAttribute="bottom" secondItem="gQH-2q-XO8" secondAttribute="bottom" id="Fzw-nI-IuS"/>
+                <constraint firstAttribute="trailing" secondItem="gQH-2q-XO8" secondAttribute="trailing" id="abu-Gg-MxJ"/>
+                <constraint firstItem="gQH-2q-XO8" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="hiE-hE-t2g"/>
+            </constraints>
+            <size key="customSize" width="427" height="154"/>
+            <connections>
+                <outlet property="containerStackView" destination="gQH-2q-XO8" id="B0c-DX-1Y6"/>
+            </connections>
+            <point key="canvasLocation" x="300.72463768115944" y="-71.651785714285708"/>
         </collectionViewCell>
     </objects>
 </document>

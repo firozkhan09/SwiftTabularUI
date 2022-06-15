@@ -22,12 +22,10 @@
 		0E43BC422859CB1D00BB120E /* ColumnsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0E43BC412859CB1D00BB120E /* ColumnsView.xib */; };
 		0E43BC46285A015D00BB120E /* ColumnCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E43BC44285A015D00BB120E /* ColumnCollectionViewCell.swift */; };
 		0E43BC47285A015D00BB120E /* ColumnCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0E43BC45285A015D00BB120E /* ColumnCollectionViewCell.xib */; };
-		0E43BC63285A0E1600BB120E /* DoubleColumnRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E43BC5E285A0E1600BB120E /* DoubleColumnRow.swift */; };
-		0E43BC64285A0E1600BB120E /* DoubleColumnRow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0E43BC5F285A0E1600BB120E /* DoubleColumnRow.xib */; };
-		0E43BC6D285A0E5800BB120E /* TripleColumnRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E43BC68285A0E5800BB120E /* TripleColumnRow.swift */; };
-		0E43BC6E285A0E5800BB120E /* TripleColumnRow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0E43BC69285A0E5800BB120E /* TripleColumnRow.xib */; };
-		0E43BC6F285A0E5800BB120E /* SingleColumnRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E43BC6B285A0E5800BB120E /* SingleColumnRow.swift */; };
-		0E43BC70285A0E5800BB120E /* SingleColumnRow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0E43BC6C285A0E5800BB120E /* SingleColumnRow.xib */; };
+		0E43BC72285A401800BB120E /* GroupedColumnItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E43BC71285A401800BB120E /* GroupedColumnItem.swift */; };
+		0E43BC74285A402D00BB120E /* GroupedColumnItem.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0E43BC73285A402D00BB120E /* GroupedColumnItem.xib */; };
+		0E43BC8D285A43BF00BB120E /* TabularLabelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E43BC8C285A43BF00BB120E /* TabularLabelView.swift */; };
+		0E43BC8F285A43EA00BB120E /* TabularLabelView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0E43BC8E285A43EA00BB120E /* TabularLabelView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,12 +46,10 @@
 		0E43BC412859CB1D00BB120E /* ColumnsView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ColumnsView.xib; sourceTree = "<group>"; };
 		0E43BC44285A015D00BB120E /* ColumnCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColumnCollectionViewCell.swift; sourceTree = "<group>"; };
 		0E43BC45285A015D00BB120E /* ColumnCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ColumnCollectionViewCell.xib; sourceTree = "<group>"; };
-		0E43BC5E285A0E1600BB120E /* DoubleColumnRow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DoubleColumnRow.swift; sourceTree = "<group>"; };
-		0E43BC5F285A0E1600BB120E /* DoubleColumnRow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DoubleColumnRow.xib; sourceTree = "<group>"; };
-		0E43BC68285A0E5800BB120E /* TripleColumnRow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TripleColumnRow.swift; sourceTree = "<group>"; };
-		0E43BC69285A0E5800BB120E /* TripleColumnRow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TripleColumnRow.xib; sourceTree = "<group>"; };
-		0E43BC6B285A0E5800BB120E /* SingleColumnRow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SingleColumnRow.swift; sourceTree = "<group>"; };
-		0E43BC6C285A0E5800BB120E /* SingleColumnRow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SingleColumnRow.xib; sourceTree = "<group>"; };
+		0E43BC71285A401800BB120E /* GroupedColumnItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupedColumnItem.swift; sourceTree = "<group>"; };
+		0E43BC73285A402D00BB120E /* GroupedColumnItem.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GroupedColumnItem.xib; sourceTree = "<group>"; };
+		0E43BC8C285A43BF00BB120E /* TabularLabelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabularLabelView.swift; sourceTree = "<group>"; };
+		0E43BC8E285A43EA00BB120E /* TabularLabelView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TabularLabelView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,7 +125,8 @@
 		0E43BC3D2859CADF00BB120E /* CutomeComponents */ = {
 			isa = PBXGroup;
 			children = (
-				0E43BC52285A0A1E00BB120E /* GroupedColumnsRowViews */,
+				0E43BC8B285A436600BB120E /* TabularLabelView */,
+				0E43BC52285A0A1E00BB120E /* GroupedColumnItem */,
 				0E43BC43285A010900BB120E /* ColumnCell */,
 				0E43BC3E2859CAF700BB120E /* ColumnsView */,
 				0E43BC382859C28300BB120E /* TabularViewCell */,
@@ -155,41 +152,22 @@
 			path = ColumnCell;
 			sourceTree = "<group>";
 		};
-		0E43BC52285A0A1E00BB120E /* GroupedColumnsRowViews */ = {
+		0E43BC52285A0A1E00BB120E /* GroupedColumnItem */ = {
 			isa = PBXGroup;
 			children = (
-				0E43BC6A285A0E5800BB120E /* SingleColumnRow */,
-				0E43BC5D285A0E1600BB120E /* DoubleColumnRow */,
-				0E43BC67285A0E5800BB120E /* TripleColumnRow */,
+				0E43BC71285A401800BB120E /* GroupedColumnItem.swift */,
+				0E43BC73285A402D00BB120E /* GroupedColumnItem.xib */,
 			);
-			path = GroupedColumnsRowViews;
+			path = GroupedColumnItem;
 			sourceTree = "<group>";
 		};
-		0E43BC5D285A0E1600BB120E /* DoubleColumnRow */ = {
+		0E43BC8B285A436600BB120E /* TabularLabelView */ = {
 			isa = PBXGroup;
 			children = (
-				0E43BC5E285A0E1600BB120E /* DoubleColumnRow.swift */,
-				0E43BC5F285A0E1600BB120E /* DoubleColumnRow.xib */,
+				0E43BC8C285A43BF00BB120E /* TabularLabelView.swift */,
+				0E43BC8E285A43EA00BB120E /* TabularLabelView.xib */,
 			);
-			path = DoubleColumnRow;
-			sourceTree = "<group>";
-		};
-		0E43BC67285A0E5800BB120E /* TripleColumnRow */ = {
-			isa = PBXGroup;
-			children = (
-				0E43BC68285A0E5800BB120E /* TripleColumnRow.swift */,
-				0E43BC69285A0E5800BB120E /* TripleColumnRow.xib */,
-			);
-			path = TripleColumnRow;
-			sourceTree = "<group>";
-		};
-		0E43BC6A285A0E5800BB120E /* SingleColumnRow */ = {
-			isa = PBXGroup;
-			children = (
-				0E43BC6B285A0E5800BB120E /* SingleColumnRow.swift */,
-				0E43BC6C285A0E5800BB120E /* SingleColumnRow.xib */,
-			);
-			path = SingleColumnRow;
+			path = TabularLabelView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -250,14 +228,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0E43BC64285A0E1600BB120E /* DoubleColumnRow.xib in Resources */,
 				0E43BC292859AEB100BB120E /* LaunchScreen.storyboard in Resources */,
 				0E43BC262859AEB100BB120E /* Assets.xcassets in Resources */,
 				0E43BC47285A015D00BB120E /* ColumnCollectionViewCell.xib in Resources */,
-				0E43BC6E285A0E5800BB120E /* TripleColumnRow.xib in Resources */,
-				0E43BC70285A0E5800BB120E /* SingleColumnRow.xib in Resources */,
 				0E43BC422859CB1D00BB120E /* ColumnsView.xib in Resources */,
 				0E43BC342859C03800BB120E /* TabularView.xib in Resources */,
+				0E43BC8F285A43EA00BB120E /* TabularLabelView.xib in Resources */,
+				0E43BC74285A402D00BB120E /* GroupedColumnItem.xib in Resources */,
 				0E43BC242859AEB000BB120E /* Main.storyboard in Resources */,
 				0E43BC3C2859C2B600BB120E /* TabularViewCell.xib in Resources */,
 			);
@@ -270,14 +247,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0E43BC6D285A0E5800BB120E /* TripleColumnRow.swift in Sources */,
-				0E43BC6F285A0E5800BB120E /* SingleColumnRow.swift in Sources */,
 				0E43BC372859C0AB00BB120E /* XIBView.swift in Sources */,
+				0E43BC8D285A43BF00BB120E /* TabularLabelView.swift in Sources */,
 				0E43BC212859AEB000BB120E /* ViewController.swift in Sources */,
-				0E43BC63285A0E1600BB120E /* DoubleColumnRow.swift in Sources */,
 				0E43BC3B2859C2B600BB120E /* TabularViewCell.swift in Sources */,
 				0E43BC402859CB1400BB120E /* ColumnsView.swift in Sources */,
 				0E43BC1D2859AEB000BB120E /* AppDelegate.swift in Sources */,
+				0E43BC72285A401800BB120E /* GroupedColumnItem.swift in Sources */,
 				0E43BC322859C02D00BB120E /* TabularView.swift in Sources */,
 				0E43BC46285A015D00BB120E /* ColumnCollectionViewCell.swift in Sources */,
 				0E43BC1F2859AEB000BB120E /* SceneDelegate.swift in Sources */,

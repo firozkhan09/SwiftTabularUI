@@ -1,5 +1,5 @@
 //
-//  SingleColumnRow.swift
+//  GroupedColumnItem.swift
 //  SwiftTabularUI
 //
 //  Created by Firoz Khan on 15/06/22.
@@ -7,11 +7,12 @@
 
 import UIKit
 
-class SingleColumnRow: XIBView {
+class GroupedColumnItem: XIBView {
     
     override func innerContentView() -> UIView? {
         let bundle = Bundle(for: type(of: self))
-        bundle.loadNibNamed("SingleColumnRow", owner: self, options: nil)
+        bundle.loadNibNamed("GroupedColumnItem", owner: self, options: nil)
         return self.contentView
     }
+    
 }
