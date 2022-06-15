@@ -7,21 +7,9 @@
 
 import UIKit
 
-enum ColumnGroupRowType {
-    case single
-    case double
-    case triple
-    
-    var cellIdentifier:String {
-        switch self {
-        case .single:
-            return ""
-        case .double:
-            return ""
-        case .triple:
-            return ""
-        }
-    }
+enum ColumnItemType {
+    case reguler
+    case grouped
 }
 
 class ColumnCollectionViewCell: UICollectionViewCell {
