@@ -13,9 +13,15 @@ enum ColumnHeaderType {
     case grouped
 }
 
+enum RowType {
+    case plain
+    case merged
+    case multi
+}
+
 struct ColumnInfoData {
     var header:ColumnHeader
-    var items:[ColumnItem] = []
+    var items:[RowItem] = []
     var footer:ColumnFooter?
     
     init(header:ColumnHeader) {
@@ -23,12 +29,16 @@ struct ColumnInfoData {
     }
 }
 
-struct ColumnItem {
+struct RowItem {
+    let type:RowType
     let value:String
+    let mergeCount:Int
     var designConfig:DesignConfid?
     
-    init(value:String, config:DesignConfid? = nil) {
+    init(type:RowType = .plain, value:String, mergeCount:Int = 1, config:DesignConfid? = nil) {
+        self.type = type
         self.value = value
+        self.mergeCount = mergeCount
         designConfig = config
     }
 }
