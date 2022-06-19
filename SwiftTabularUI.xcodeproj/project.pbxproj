@@ -32,6 +32,8 @@
 		0E43BC99285A5A6F00BB120E /* DesignConfid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E43BC98285A5A6F00BB120E /* DesignConfid.swift */; };
 		0E4445A2285F8A2F007FA51B /* MultiRowItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E4445A1285F8A2F007FA51B /* MultiRowItem.swift */; };
 		0E4445A4285F8A39007FA51B /* MultiRowItem.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0E4445A3285F8A39007FA51B /* MultiRowItem.xib */; };
+		0E4445A7285F8B71007FA51B /* MergedRowItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E4445A6285F8B71007FA51B /* MergedRowItem.swift */; };
+		0E4445A9285F8B7C007FA51B /* MergedRowItem.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0E4445A8285F8B7C007FA51B /* MergedRowItem.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -62,6 +64,8 @@
 		0E43BC98285A5A6F00BB120E /* DesignConfid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignConfid.swift; sourceTree = "<group>"; };
 		0E4445A1285F8A2F007FA51B /* MultiRowItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultiRowItem.swift; sourceTree = "<group>"; };
 		0E4445A3285F8A39007FA51B /* MultiRowItem.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MultiRowItem.xib; sourceTree = "<group>"; };
+		0E4445A6285F8B71007FA51B /* MergedRowItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MergedRowItem.swift; sourceTree = "<group>"; };
+		0E4445A8285F8B7C007FA51B /* MergedRowItem.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MergedRowItem.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -139,8 +143,9 @@
 		0E43BC3D2859CADF00BB120E /* CutomeComponents */ = {
 			isa = PBXGroup;
 			children = (
-				0E4445A0285F89B9007FA51B /* MultiRowItem */,
+				0E4445A5285F8B65007FA51B /* MergedRowItem */,
 				0E43BC8B285A436600BB120E /* TabularLabelView */,
+				0E4445A0285F89B9007FA51B /* MultiRowItem */,
 				0E43BC52285A0A1E00BB120E /* GroupedColumnItem */,
 				0E43BC43285A010900BB120E /* ColumnCell */,
 				0E43BC3E2859CAF700BB120E /* ColumnsView */,
@@ -212,6 +217,15 @@
 			path = MultiRowItem;
 			sourceTree = "<group>";
 		};
+		0E4445A5285F8B65007FA51B /* MergedRowItem */ = {
+			isa = PBXGroup;
+			children = (
+				0E4445A6285F8B71007FA51B /* MergedRowItem.swift */,
+				0E4445A8285F8B7C007FA51B /* MergedRowItem.xib */,
+			);
+			path = MergedRowItem;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -277,6 +291,7 @@
 				0E43BC422859CB1D00BB120E /* ColumnsView.xib in Resources */,
 				0E43BC342859C03800BB120E /* TabularView.xib in Resources */,
 				0E43BC8F285A43EA00BB120E /* TabularLabelView.xib in Resources */,
+				0E4445A9285F8B7C007FA51B /* MergedRowItem.xib in Resources */,
 				0E43BC74285A402D00BB120E /* GroupedColumnItem.xib in Resources */,
 				0E43BC242859AEB000BB120E /* Main.storyboard in Resources */,
 				0E43BC3C2859C2B600BB120E /* TabularViewCell.xib in Resources */,
@@ -299,6 +314,7 @@
 				0E43BC402859CB1400BB120E /* ColumnsView.swift in Sources */,
 				0E43BC1D2859AEB000BB120E /* AppDelegate.swift in Sources */,
 				0E43BC99285A5A6F00BB120E /* DesignConfid.swift in Sources */,
+				0E4445A7285F8B71007FA51B /* MergedRowItem.swift in Sources */,
 				0E4445A2285F8A2F007FA51B /* MultiRowItem.swift in Sources */,
 				0E43BC72285A401800BB120E /* GroupedColumnItem.swift in Sources */,
 				0E43BC94285A4FFB00BB120E /* TabularViewModel.swift in Sources */,
