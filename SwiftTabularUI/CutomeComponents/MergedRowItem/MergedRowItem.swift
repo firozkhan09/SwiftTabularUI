@@ -9,6 +9,8 @@ import UIKit
 
 class MergedRowItem: XIBView {
     
+    @IBOutlet weak private var heightConstraint: NSLayoutConstraint!
+    
     override func innerContentView() -> UIView? {
         let bundle = Bundle(for: type(of: self))
         bundle.loadNibNamed("TabularLabelView", owner: self, options: nil)

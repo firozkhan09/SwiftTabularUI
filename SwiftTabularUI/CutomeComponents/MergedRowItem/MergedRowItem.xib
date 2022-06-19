@@ -2,7 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20037"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -10,16 +10,32 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MergedRowItem" customModule="SwiftTabularUI" customModuleProvider="target">
             <connections>
                 <outlet property="contentView" destination="iN0-l3-epB" id="L6J-SO-61E"/>
+                <outlet property="heightConstraint" destination="y1K-Gj-iUj" id="yTy-Mo-o2Y"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" id="iN0-l3-epB">
             <rect key="frame" x="0.0" y="0.0" width="414" height="117"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xTc-E9-9My" customClass="TabularLabelView" customModule="SwiftTabularUI" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="117"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="117" id="y1K-Gj-iUj"/>
+                    </constraints>
+                </view>
+            </subviews>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="xTc-E9-9My" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="K97-04-mLI"/>
+                <constraint firstAttribute="bottom" secondItem="xTc-E9-9My" secondAttribute="bottom" id="NL6-Ug-WSY"/>
+                <constraint firstAttribute="trailing" secondItem="xTc-E9-9My" secondAttribute="trailing" id="jCC-3q-oDD"/>
+                <constraint firstItem="xTc-E9-9My" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="lIr-uS-BKu"/>
+            </constraints>
             <nil key="simulatedTopBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-            <point key="canvasLocation" x="138" y="243"/>
+            <point key="canvasLocation" x="137.68115942028987" y="242.74553571428569"/>
         </view>
     </objects>
     <resources>
