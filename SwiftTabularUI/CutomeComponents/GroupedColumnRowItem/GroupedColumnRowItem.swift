@@ -1,5 +1,5 @@
 //
-//  MultiRowItem.swift
+//  GroupedColumnRowItem.swift
 //  SwiftTabularUI
 //
 //  Created by Firoz Khan on 19/06/22.
@@ -7,11 +7,11 @@
 
 import UIKit
 
-class MultiRowItem: XIBView {
+class GroupedColumnRowItem: XIBView {
 
     override func innerContentView() -> UIView? {
         let bundle = Bundle(for: type(of: self))
-        bundle.loadNibNamed("MultiRowItem", owner: self, options: nil)
+        bundle.loadNibNamed("GroupedColumnRowItem", owner: self, options: nil)
         self.contentView.addBorder()
         return self.contentView
     }
