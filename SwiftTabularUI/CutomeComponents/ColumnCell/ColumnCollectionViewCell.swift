@@ -15,6 +15,7 @@ enum ColumnItemType {
 class ColumnCollectionViewCell: UICollectionViewCell {
 
     @IBOutlet weak var containerStackView: UIStackView!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
