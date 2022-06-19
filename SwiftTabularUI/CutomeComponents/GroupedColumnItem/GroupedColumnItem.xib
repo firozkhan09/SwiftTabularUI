@@ -25,9 +25,10 @@
                             <rect key="frame" x="0.0" y="0.0" width="414" height="91"/>
                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         </view>
-                        <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uy0-kC-gnH">
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="x11-Yh-X1q" customClass="GroupedColumnRowItem" customModule="SwiftTabularUI" customModuleProvider="target">
                             <rect key="frame" x="0.0" y="91" width="414" height="91"/>
-                        </stackView>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        </view>
                     </subviews>
                 </stackView>
             </subviews>
