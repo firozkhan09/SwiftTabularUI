@@ -20,5 +20,17 @@ class ColumnCollectionViewCell: UICollectionViewCell {
         super.awakeFromNib()
         // Initialization code
     }
+    
+    func bind(data: ColumnInfoData) {
+        loadViews(for: data)
+    }
+    
+    private func loadViews(for columnData: ColumnInfoData) {
+        removeAll()
+    }
+    
+    private func removeAll() {
+        containerStackView.removeAll()
+    }
 
 }
