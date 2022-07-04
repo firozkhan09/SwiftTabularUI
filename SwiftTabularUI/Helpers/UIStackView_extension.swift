@@ -5,4 +5,15 @@
 //  Created by Firoz Khan on 04/07/22.
 //
 
-import Foundation
+import UIKit
+
+extension UIStackView {
+    
+    func removeAll() {
+        arrangedSubviews.forEach { subview in
+            removeArrangedSubview(subview)
+            subview.removeFromSuperview()
+        }
+    }
+    
+}
