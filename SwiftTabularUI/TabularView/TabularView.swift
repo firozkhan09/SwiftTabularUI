@@ -10,7 +10,7 @@ import UIKit
 protocol TabularViewDataSource: NSObjectProtocol {
     func numerOfColumns(in tabularView: TabularView) -> Int
     
-    func tabularView(_ tabularView: TabularView, columnInfoData atIndex:Int) -> ColumnInfoData
+    func tabularView(_ tabularView: TabularView, columnInfoDataAtIndex index:Int) -> ColumnInfoData
 }
 
 protocol TabularViewDelegate: NSObjectProtocol {
@@ -51,7 +51,7 @@ extension TabularView {
         columnDataList.removeAll()
         guard let source = dataSource else { return }
         for i in 0..<count {
-            let data = source.tabularView(self, columnInfoData: i)
+            let data = source.tabularView(self, columnInfoDataAtIndex: i)
             columnDataList.append(data)
         }
     }
