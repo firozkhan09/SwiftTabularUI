@@ -34,6 +34,7 @@
 		0E4445A4285F8A39007FA51B /* GroupedColumnRowItem.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0E4445A3285F8A39007FA51B /* GroupedColumnRowItem.xib */; };
 		0E4445A7285F8B71007FA51B /* MergedRowItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E4445A6285F8B71007FA51B /* MergedRowItem.swift */; };
 		0E4445A9285F8B7C007FA51B /* MergedRowItem.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0E4445A8285F8B7C007FA51B /* MergedRowItem.xib */; };
+		0E5F1BB82872C40900C72DC4 /* UIStackView_extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E5F1BB72872C40900C72DC4 /* UIStackView_extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -66,6 +67,7 @@
 		0E4445A3285F8A39007FA51B /* GroupedColumnRowItem.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GroupedColumnRowItem.xib; sourceTree = "<group>"; };
 		0E4445A6285F8B71007FA51B /* MergedRowItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MergedRowItem.swift; sourceTree = "<group>"; };
 		0E4445A8285F8B7C007FA51B /* MergedRowItem.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MergedRowItem.xib; sourceTree = "<group>"; };
+		0E5F1BB72872C40900C72DC4 /* UIStackView_extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIStackView_extension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,6 +129,7 @@
 			children = (
 				0E43BC362859C0AB00BB120E /* XIBView.swift */,
 				0E43BC90285A4B6B00BB120E /* UIView_extension.swift */,
+				0E5F1BB72872C40900C72DC4 /* UIStackView_extension.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -312,6 +315,7 @@
 				0E43BC3B2859C2B600BB120E /* TabularViewCell.swift in Sources */,
 				0E43BC91285A4B6B00BB120E /* UIView_extension.swift in Sources */,
 				0E43BC402859CB1400BB120E /* ColumnsView.swift in Sources */,
+				0E5F1BB82872C40900C72DC4 /* UIStackView_extension.swift in Sources */,
 				0E43BC1D2859AEB000BB120E /* AppDelegate.swift in Sources */,
 				0E43BC99285A5A6F00BB120E /* DesignConfid.swift in Sources */,
 				0E4445A7285F8B71007FA51B /* MergedRowItem.swift in Sources */,
