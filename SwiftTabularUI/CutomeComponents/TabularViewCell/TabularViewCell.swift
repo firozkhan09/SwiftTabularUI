@@ -11,6 +11,10 @@ class TabularViewCell: UITableViewCell {
 
     @IBOutlet weak var columns: ColumnsView!
     
+    var columnInfoList:[ColumnInfoData]? {
+        didSet { columns.columnsData = columnInfoList }
+    }
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
