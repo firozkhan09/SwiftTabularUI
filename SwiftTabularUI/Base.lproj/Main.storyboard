@@ -15,9 +15,24 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vc1-cK-w7G" customClass="TabularView" customModule="SwiftTabularUI" customModuleProvider="target">
+                                <rect key="frame" x="16" y="76" width="382" height="754"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="vc1-cK-w7G" secondAttribute="bottom" constant="32" id="V7m-Ex-dsm"/>
+                            <constraint firstItem="vc1-cK-w7G" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="32" id="VCP-Zw-tVH"/>
+                            <constraint firstItem="vc1-cK-w7G" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="jyZ-Y3-Xvd"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="vc1-cK-w7G" secondAttribute="trailing" constant="16" id="oF6-og-CEM"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="tabularView" destination="vc1-cK-w7G" id="j3f-Yx-tft"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
