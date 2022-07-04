@@ -11,6 +11,12 @@ class ColumnsView: XIBView {
     private let cellIdentifier = "ColumnCollectionViewCell"
     @IBOutlet private(set) var collectionView:UICollectionView!
     
+    var columnsData:[ColumnInfoData]? {
+        didSet{
+            collectionView.reloadData()
+        }
+    }
+    
     override func innerContentView() -> UIView? {
         let bundle = Bundle(for: type(of: self))
         bundle.loadNibNamed("ColumnsView", owner: self, options: nil)
@@ -32,7 +38,7 @@ extension ColumnsView: UICollectionViewDataSource {
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 0
+        return columnsData?.count ?? 0
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
