@@ -23,6 +23,7 @@ class TabularView: XIBView {
     weak open var delegate: TabularViewDelegate?
     
     private let cellIdentifier = "TabularViewCell"
+    private var columnDataList = [ColumnInfoData]()
     
     @IBOutlet private(set) var tableView:UITableView!
     
@@ -41,6 +42,21 @@ class TabularView: XIBView {
     }
 }
 
+extension TabularView {
+    func reloadData() {
+        tableView.reloadData()
+    }
+    
+    private func mapColumnData(forNumberOfColumns count:Int) {
+        columnDataList.removeAll()
+        guard let source = dataSource else { return }
+        for i in 0..<count {
+            let data = source.tabularView(self, columnInfoData: i)
+            columnDataList.append(data)
+        }
+    }
+}
+
 extension TabularView: UITableViewDataSource, UITableViewDelegate {
     private func setupTableView() {
         tableView?.dataSource = self
@@ -52,7 +68,9 @@ extension TabularView: UITableViewDataSource, UITableViewDelegate {
         // This is a table view having only one cell,
         // this will provide the capability to scroll vertical
         // if any number of rows are hidding due to the static view size
-        return 1
+        let numberOfColumns = dataSource?.numerOfColumns(in: self) ?? 0
+        mapColumnData(forNumberOfColumns: numberOfColumns)
+        return numberOfColumns > 0 ? 1 : 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
