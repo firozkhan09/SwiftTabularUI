@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
-        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -16,13 +15,13 @@
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" id="iN0-l3-epB">
-            <rect key="frame" x="0.0" y="0.0" width="414" height="216"/>
+            <rect key="frame" x="0.0" y="0.0" width="414" height="168"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="NPT-TY-25B">
-                    <rect key="frame" x="0.0" y="0.0" width="414" height="216"/>
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="168"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="rct-fG-7Vl">
+                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="rct-fG-7Vl">
                         <size key="itemSize" width="128" height="128"/>
                         <size key="headerReferenceSize" width="0.0" height="0.0"/>
                         <size key="footerReferenceSize" width="0.0" height="0.0"/>
@@ -30,17 +29,16 @@
                     </collectionViewFlowLayout>
                 </collectionView>
             </subviews>
-            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
-                <constraint firstItem="NPT-TY-25B" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="40b-tM-UVS"/>
-                <constraint firstItem="NPT-TY-25B" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="9vf-1J-HJW"/>
-                <constraint firstItem="NPT-TY-25B" firstAttribute="bottom" secondItem="vUN-kp-3ea" secondAttribute="bottom" id="EKv-iL-MqD"/>
+                <constraint firstItem="NPT-TY-25B" firstAttribute="trailing" secondItem="iN0-l3-epB" secondAttribute="trailing" id="40b-tM-UVS"/>
+                <constraint firstItem="NPT-TY-25B" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="9vf-1J-HJW"/>
+                <constraint firstItem="NPT-TY-25B" firstAttribute="bottom" secondItem="iN0-l3-epB" secondAttribute="bottom" id="EKv-iL-MqD"/>
                 <constraint firstItem="NPT-TY-25B" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="h1L-2M-6U1"/>
             </constraints>
             <nil key="simulatedTopBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-            <point key="canvasLocation" x="144.92753623188406" y="-206.25"/>
+            <point key="canvasLocation" x="267" y="-210"/>
         </view>
     </objects>
     <resources>
