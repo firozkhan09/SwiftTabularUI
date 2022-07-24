@@ -30,6 +30,7 @@ class ColumnCollectionViewCell: UICollectionViewCell {
         addHeader(columnData.header)
         addItems(columnData.items)
         addFooter(columnData.footer)
+        containerStackView.layoutIfNeeded() // important
     }
     
     private func addHeader(_ header:ColumnHeader) {
