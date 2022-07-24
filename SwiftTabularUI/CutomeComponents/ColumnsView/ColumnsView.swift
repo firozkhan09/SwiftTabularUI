@@ -35,6 +35,10 @@ extension ColumnsView: UICollectionViewDataSource {
         collectionView.dataSource = self
         let nib = UINib(nibName: cellIdentifier, bundle: nil)
         collectionView.register(nib, forCellWithReuseIdentifier: cellIdentifier)
+        if let flowLayout = collectionView?.collectionViewLayout as? UICollectionViewFlowLayout {
+            flowLayout.scrollDirection = .horizontal
+            flowLayout.estimatedItemSize = UICollectionViewFlowLayout.automaticSize//CGSize(width: 1, height:1)
+        }
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -42,8 +46,10 @@ extension ColumnsView: UICollectionViewDataSource {
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier:cellIdentifier , for: indexPath) as? ColumnCollectionViewCell
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier:cellIdentifier , for: indexPath) as? ColumnCollectionViewCell,
+              let cellData = columnsData?[indexPath.row]
         else { return UICollectionViewCell() }
+        cell.bind(data: cellData)
         return cell
     }
 }

@@ -76,6 +76,7 @@ extension TabularView: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as? TabularViewCell
         else { return UITableViewCell() }
+        cell.columnInfoList = columnDataList
         return cell
     }
     
