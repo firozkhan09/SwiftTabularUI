@@ -30,15 +30,16 @@ class ColumnsView: XIBView {
 }
 
 extension ColumnsView: UICollectionViewDataSource {
+    
     private func setupCollectionView() {
         collectionView.delegate = self
         collectionView.dataSource = self
-        let nib = UINib(nibName: cellIdentifier, bundle: nil)
-        collectionView.register(nib, forCellWithReuseIdentifier: cellIdentifier)
         if let flowLayout = collectionView?.collectionViewLayout as? UICollectionViewFlowLayout {
             flowLayout.scrollDirection = .horizontal
-            flowLayout.estimatedItemSize = UICollectionViewFlowLayout.automaticSize//CGSize(width: 1, height:1)
+            flowLayout.estimatedItemSize = CGSize(width: 1, height:1) // important (automatic does not work)
         }
+        let nib = UINib(nibName: cellIdentifier, bundle: nil)
+        collectionView.register(nib, forCellWithReuseIdentifier: cellIdentifier)
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
