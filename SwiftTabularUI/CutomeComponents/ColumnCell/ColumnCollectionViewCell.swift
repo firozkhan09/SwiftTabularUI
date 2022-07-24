@@ -16,6 +16,8 @@ class ColumnCollectionViewCell: UICollectionViewCell {
 
     @IBOutlet weak var containerStackView: UIStackView!
     
+    var height: CGFloat = 0.0
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -30,7 +32,10 @@ class ColumnCollectionViewCell: UICollectionViewCell {
         addHeader(columnData.header)
         addItems(columnData.items)
         addFooter(columnData.footer)
-        containerStackView.layoutIfNeeded() // important
+        
+        // sequence of setting height and layout is very important
+        height = containerStackView.bounds.size.height
+        containerStackView.layoutIfNeeded() // crash if not written
     }
     
     private func addHeader(_ header:ColumnHeader) {

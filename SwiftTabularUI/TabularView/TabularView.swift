@@ -8,19 +8,19 @@
 import UIKit
 
 protocol TabularViewDataSource: NSObjectProtocol {
-    func numerOfColumns(in tabularView: TabularView) -> Int
-    
+    func numberOfColumns(in tabularView: TabularView) -> Int
     func tabularView(_ tabularView: TabularView, columnInfoDataAtIndex index:Int) -> ColumnInfoData
 }
 
 protocol TabularViewDelegate: NSObjectProtocol {
-    
+    func tabularView(_ tabularView: TabularView, didUpdateHeight height: CGFloat)
 }
 
 class TabularView: XIBView {
     
     weak open var dataSource: TabularViewDataSource?
     weak open var delegate: TabularViewDelegate?
+    open var height: CGFloat = 0.0
     
     private let cellIdentifier = "TabularViewCell"
     private var columnDataList = [ColumnInfoData]()
@@ -43,6 +43,7 @@ class TabularView: XIBView {
 }
 
 extension TabularView {
+    
     func reloadData() {
         tableView.reloadData()
     }
@@ -58,17 +59,22 @@ extension TabularView {
 }
 
 extension TabularView: UITableViewDataSource, UITableViewDelegate {
+    
     private func setupTableView() {
         tableView?.dataSource = self
         tableView?.delegate = self
+        tableView.separatorStyle = .none
         let nib = UINib(nibName: cellIdentifier, bundle: .main)
         tableView?.register(nib, forCellReuseIdentifier: cellIdentifier)
+        tableView.estimatedRowHeight = 150
+        tableView.rowHeight = UITableView.automaticDimension
     }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // This is a table view having only one cell,
         // this will provide the capability to scroll vertical
         // if any number of rows are hidding due to the static view size
-        let numberOfColumns = dataSource?.numerOfColumns(in: self) ?? 0
+        let numberOfColumns = dataSource?.numberOfColumns(in: self) ?? 0
         mapColumnData(forNumberOfColumns: numberOfColumns)
         return numberOfColumns > 0 ? 1 : 0
     }
@@ -76,9 +82,21 @@ extension TabularView: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as? TabularViewCell
         else { return UITableViewCell() }
+        
+        // sequence of closure and columnInfoList is very important
+        cell.didUpdateHeight = { height in
+            self.didUpdate(height: height)
+        }
         cell.columnInfoList = columnDataList
+        
         return cell
     }
     
-    
+    private func didUpdate(height: CGFloat) {
+        if self.height != height {
+            self.height = height
+            delegate?.tabularView(self, didUpdateHeight: height)
+            tableView.reloadData()
+        }
+    }
 }

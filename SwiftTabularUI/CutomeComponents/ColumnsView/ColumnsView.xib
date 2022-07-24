@@ -10,6 +10,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ColumnsView" customModule="SwiftTabularUI" customModuleProvider="target">
             <connections>
                 <outlet property="collectionView" destination="NPT-TY-25B" id="fvP-lK-YWA"/>
+                <outlet property="collectionViewHeightConstraint" destination="81U-Vh-yxw" id="NVy-Xu-7oV"/>
                 <outlet property="contentView" destination="iN0-l3-epB" id="Idf-zc-crD"/>
             </connections>
         </placeholder>
@@ -21,6 +22,9 @@
                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="NPT-TY-25B">
                     <rect key="frame" x="0.0" y="0.0" width="414" height="168"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="168" id="81U-Vh-yxw"/>
+                    </constraints>
                     <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="rct-fG-7Vl">
                         <size key="itemSize" width="128" height="128"/>
                         <size key="headerReferenceSize" width="0.0" height="0.0"/>

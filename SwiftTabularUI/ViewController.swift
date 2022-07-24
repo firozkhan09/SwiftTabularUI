@@ -16,12 +16,10 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
         tabularView.dataSource = self
     }
-
-
 }
 
 extension ViewController:  TabularViewDataSource {
-    func numerOfColumns(in tabularView: TabularView) -> Int {
+    func numberOfColumns(in tabularView: TabularView) -> Int {
         return columns.columnsData.count
     }
     
